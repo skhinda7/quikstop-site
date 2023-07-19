@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/menu.css">
     <link rel="stylesheet" href="/css/home.css">
-    <script type="javascript" src="/function.js"></script>
 </head>
 
 
@@ -16,15 +15,27 @@
 
 <body>
     <header>
-        <img class="logo" src="/other/logo.jpg" alt="logo">
-        <nav>
-            <ul class="nav-link">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Our Town</a></li>
-            </ul>
-        </nav>
-        <a class="cta" href="#"><button>Contact</button></a>
+        <div class="navbar">
+            <img class="logo" src="/other/logo.jpg" alt="logo">
+            <nav>
+                <ul class="nav-link">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Town</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="#"><button>Contact</button></a>
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
+        </div>
+        <div class="dropdown-menu" id="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Town</a></li>
+            <li><a class="cta" href="#"><button>Contact</button></a>
+            </li>
+        </div>
     </header>
     <div id="slideshow-div">
         <div class="slider">
@@ -65,9 +76,37 @@
                 </div>
             </div>
             <div id="memo">
-                <h4>Convenience is in your neighborhood!</h4>
+                <div class="letter">C</div>
+                <div class="letter">o</div>
+                <div class="letter">n</div>
+                <div class="letter">v</div>
+                <div class="letter">e</div>
+                <div class="letter">n</div>
+                <div class="letter">i</div>
+                <div class="letter">e</div>
+                <div class="letter">n</div>
+                <div class="letter">c</div>
+                <div class="letter" id="last-letter">e</div>
+                <div class="letter">i</div>
+                <div class="letter" id="last-letter">n</div>
+                <div class="letter"></div>
+                <div class="letter">t</div>
+                <div class="letter">h</div>
+                <div class="letter" id="last-letter">e</div>
+                <div class="letter"> </div>
+                <div class="letter">n</div>
+                <div class="letter">e</div>
+                <div class="letter">i</div>
+                <div class="letter">g</div>
+                <div class="letter">h</div>
+                <div class="letter">b</div>
+                <div class="letter">o</div>
+                <div class="letter">r</div>
+                <div class="letter">h</div>
+                <div class="letter">o</div>
+                <div class="letter">o</div>
+                <div class="letter">d</div>
+                <div class="letter">!</div>
             </div>
             <script src="/function.js"></script>
-
-
 </body>
