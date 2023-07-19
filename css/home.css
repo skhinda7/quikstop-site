@@ -1,0 +1,43 @@
+.slide-pic {
+    padding-top: 10px;
+    width: 100%;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+#memo {
+    color: white;
+    font-size: 35px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    transition: .3s ease-in-out;
+    margin-top: 10px;
+}
+
+.slider-frame {
+    overflow: hidden;
+
+}
+
+@-webkit-keyframes slide_animation {
+    0% {
+        left: 0px;
+    }
+
+    10% {
+        left: 0px;
+    }
+
+    30% {
+        left: 0px;
+    }
+}
+
+@media (max-width: 750px) {
+    #memo {
+        font-size: 25px;
+        transition: .3s ease-in-out;
+        padding: 15px;
+    }
+}
