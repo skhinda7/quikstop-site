@@ -87,13 +87,3 @@
     transition: .3s ease-in-out;
     margin-top: 10px;
 }
-
-
-
-@media (max-width: 750px) {
-    #memo {
-        font-size: 25px;
-        transition: .3s ease-in-out;
-        padding: 15px;
-    }
-}
