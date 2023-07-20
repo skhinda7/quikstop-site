@@ -68,31 +68,14 @@ button:hover {
 
 .dropdown-menu {
     display: none;
-    height: 0;
-    border-radius: 10px;
-    overflow: hidden;
-    z-index: 99;
-    transition: height 0.4s;
 }
 
-.dropdown-menu .cta {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+#checkbox,
+.toggle {
+    display: none;
 }
 
-.dropdown-menu li {
-    padding: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.dropdown-menu.open {
-    height: 165px;
-}
-
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
 
     .numbertext {
         display: none;
@@ -103,53 +86,89 @@ button:hover {
         display: none;
     }
 
-    .hamburger {
-        display: block;
-        cursor: pointer;
-        appearance: none;
-        background: none;
-        outline: none;
-        border: none;
-        background-color: transparent
-    }
-
-    .hamburger:hover {
-        background-color: transparent
-    }
-
-    .hamburger .bar,
-    .hamburger:after,
-    .hamburger:before {
-        content: '';
-        display: block;
-        width: 60px;
-        height: 5px;
-        background-color: red;
-        margin: 6px;
-        transition: 0.4s;
-        border-radius: 50px;
-    }
-
     .dropdown-menu {
         display: block;
+        height: 0;
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 99;
+        transition: height 0.4s;
     }
 
-    .hamburger.is-active:before {
-        transform: rotate(-45deg) translate(-7px, 8px);
+    .dropdown-menu .cta {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .dropdown-menu li {
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dropdown-menu.open {
+        height: 175px;
+    }
+
+    .toggle {
         position: relative;
-        z-index: 100;
+        width: 40px;
+        cursor: pointer;
+        display: block;
+        height: calc(4px * 3 + 11px * 2);
     }
 
-    .hamburger.is-active .bar {
+    .bar {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 4px;
+        border-radius: calc(4px / 2);
+        background: red;
+        color: inherit;
+        opacity: 1;
+        transition: none 0.35s cubic-bezier(.5, -0.35, .35, 1.5) 0s;
+    }
+
+    /***** Spin Animation *****/
+
+    .bar--top {
+        bottom: calc(50% + 11px + 4px/ 2);
+        transition-property: bottom, transform;
+        transition-delay: calc(0s + 0.35s), 0s;
+    }
+
+    .bar--middle {
+        top: calc(50% - 4px/ 2);
+        transition-property: opacity;
+        transition-delay: calc(0s + 0.35s);
+    }
+
+    .bar--bottom {
+        top: calc(50% + 11px + 4px/ 2);
+        transition-property: top, transform;
+        transition-delay: calc(0s + 0.35s), 0s;
+    }
+
+    #checkbox:checked+.toggle .bar--top {
+        bottom: calc(50% - 4px/ 2);
+        transform: rotate(135deg);
+        transition-delay: 0s, calc(0s + 0.35s);
+    }
+
+    #checkbox:checked+.toggle .bar--middle {
         opacity: 0;
+        transition-duration: 0s;
+        transition-delay: calc(0s + 0.35s);
     }
 
-    .hamburger.is-active:after {
-        transform: rotate(45deg) translate(-8px, -8px);
-        position: relative;
-        z-index: 100;
+    #checkbox:checked+.toggle .bar--bottom {
+        top: calc(50% - 4px/ 2);
+        transform: rotate(225deg);
+        transition-delay: 0s, calc(0s + 0.35s);
     }
-
 }
 
 @media (max-width: 720px) {
@@ -159,10 +178,11 @@ button:hover {
     button {
         font-family: "Montserrat", "sans-serif";
         font-weight: 500;
-        font-size: 13px;
+        font-size: 12px;
         color: white;
         text-decoration: none;
     }
+
 
     .logo {
         width: 100px;
