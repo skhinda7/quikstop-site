@@ -24,3 +24,4 @@ function showSlides() {
 document.querySelector("#checkbox").addEventListener("change", function () {
     document.querySelector('.dropdown-menu').classList.toggle('open');
 });
+

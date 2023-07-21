@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+
+
+
+<head>
+    <title>Our Town</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/town.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <img class="logo" src="/other/logo.jpg" alt="logo">
+            <nav>
+                <ul class="nav-link">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Town</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="#"><button>Contact</button></a>
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="toggle">
+                <div class="bar bar--top"></div>
+                <div class="bar bar--middle"></div>
+                <div class="bar bar--bottom"></div>
+            </label>
+        </div>
+
+        <div class="dropdown-menu" id="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Town</a></li>
+            <li><a class="cta" href="#"><button>Contact</button></a>
+            </li>
+        </div>
+    </header>
+    <div class="town">
+        <a id="bridge"><img alt=""
+                src="https://media-cdn.tripadvisor.com/media/photo-s/0b/7c/42/44/great-river-bridge.jpg" /></a><br />This
+        photo of Burlington is courtesy of Tripadvisor>
+    </div>
+    <div class="description">
+        Burlington, Iowa, is a delightful city on the banks of the Mississippi River, known for its historic charm,
+        scenic
+        riverfront, and vibrant cultural attractions. With well-preserved architecture reflecting its storied past,
+        visitors can
+        explore a captivating blend of modern amenities and nostalgic allure, making Burlington a must-visit destination
+        for an
+        unforgettable Midwest experience.
+    </div>
+    <div class="snake-alley">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/aa/c6/98/snake-alley-overhead.jpg?w=1200&h=1200&s=1"
+            alt="Snake Alley">
+    </div>
+    <script>
+        document.querySelector("#checkbox").addEventListener("change", function () {
+            document.querySelector('.dropdown-menu').classList.toggle('open');
+        });
+    </script>
+</body>

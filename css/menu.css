@@ -91,7 +91,7 @@ button:hover {
         height: 0;
         border-radius: 10px;
         overflow: hidden;
-        z-index: 99;
+        z-index: 100;
         transition: height 0.4s;
     }
 
@@ -109,7 +109,7 @@ button:hover {
     }
 
     .dropdown-menu.open {
-        height: 175px;
+        height: 180px;
     }
 
     .toggle {

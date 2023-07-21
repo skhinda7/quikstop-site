@@ -1,0 +1,35 @@
+.town {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.description {
+    color: white;
+    text-align: center;
+    margin-left: 12%;
+    margin-right: 12%;
+    font-size: 30px;
+    padding-bottom: 30px;
+    transition: .3s ease-in-out;
+}
+
+.snake-alley img {
+    width: 600px;
+}
+
+.snake-alley {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    .description {
+        font-size: 20px;
+    }
+}
