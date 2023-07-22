@@ -8,8 +8,9 @@
 
 .front-pic {
     vertical-align: middle;
-    height: 700px;
+    height: 455px;
     width: 100%;
+    margin-top: 50px;
     object-fit: cover;
     transition: 0.3s;
     border-radius: 3px;
@@ -62,13 +63,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
 }
 
 .letter {
     transition: 0.4s;
     transform: translateX(0);
     cursor: grab;
-    color: #f2f2f2
+    color: #f2f2f2;
+    font-size: 50px;
 }
 
 .letter:hover {
@@ -96,6 +99,7 @@
 
 #about-us-redirect {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center
 }
@@ -105,6 +109,22 @@
     text-align: center;
     color: white;
 }
+
+.secondary-pic {
+    height: 300px;
+}
+
+#about-us-redirect {
+    padding-right: 155px;
+    padding-left: 150px;
+    margin-top: 50px;
+}
+
+.about {
+    margin-right: 50px;
+    margin-left: 60px;
+}
+
 
 @keyframes fade {
     from {
@@ -121,8 +141,12 @@
         font-size: 11px
     }
 
-    #memo {
-        font-size: 20px;
+    .letter {
+        font-size: 25px;
+    }
+
+    .about {
+        margin: 0px 50px 50px 50px;
     }
 }
 
@@ -132,10 +156,12 @@
         padding: 5%;
         height: 600px;
         object-fit: cover;
+        margin-top: 5px;
     }
 
-    #memo {
-        font-size: 40px;
+    #about-us-redirect {
+        padding-right: 0px;
+        padding-left: 0px;
+        flex-direction: column;
     }
-
 }
