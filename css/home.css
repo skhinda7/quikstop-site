@@ -8,8 +8,8 @@
 
 .front-pic {
     vertical-align: middle;
-    width: 100px;
-    height: 500px;
+    height: 700px;
+    width: 100%;
     object-fit: cover;
     transition: 0.3s;
     border-radius: 3px;
@@ -54,7 +54,6 @@
 
 #memo {
     color: white;
-    font-size: 35px;
     margin: auto;
     width: 100%;
     text-align: center;
@@ -83,7 +82,29 @@
     margin-right: 10px;
 }
 
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
 
+.gallery img {
+    width: 65%;
+}
+
+#about-us-redirect {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.about {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
 
 @keyframes fade {
     from {
@@ -101,7 +122,7 @@
     }
 
     #memo {
-        font-size: 15px;
+        font-size: 20px;
     }
 }
 
@@ -109,12 +130,12 @@
     .front-pic {
         vertical-align: middle;
         padding: 5%;
-        height: 500px;
+        height: 600px;
         object-fit: cover;
     }
 
     #memo {
-        font-size: 25px;
+        font-size: 40px;
     }
 
 }
