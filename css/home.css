@@ -114,6 +114,10 @@
     margin-top: 150px;
 }
 
+.intro-text {
+    max-width: 600px;
+}
+
 .text {
     font-size: 20px;
     text-align: center;
@@ -122,12 +126,9 @@
 
 .secondary-pic {
     height: 300px;
+    width: 400px;
 }
 
-.about {
-    margin-right: 50px;
-    margin-left: 60px;
-}
 
 #stack-pic {
     display: none;
@@ -135,6 +136,14 @@
 
 .contact {
     margin-bottom: 10px;
+}
+
+#pic-one {
+    margin-left: 50px;
+}
+
+#pic-two {
+    margin-right: 50px;
 }
 
 
@@ -148,7 +157,39 @@
     }
 }
 
+.fade-in {
+    opacity: 0;
+}
 
+.fade-in.appear {
+    opacity: 1;
+}
+
+.from-left {
+    grid-column: 2 / 3;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.from-right {
+    grid-column: 3 / 4;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
+.from-left,
+.from-right {
+    transition: opacity 250ms ease-in, transform 750ms ease-in,
+        -webkit-transform 750ms ease-in;
+    opacity: 0;
+}
+
+.from-left.appear,
+.from-right.appear {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+}
 
 @media only screen and (max-width: 720px) {
     .text {
@@ -166,7 +207,7 @@
 
 @media (max-width: 900px) {
     .about {
-        margin: 100px 50px 10px 50px;
+        margin: 100px 0px 10px 0px;
     }
 
     .letter {
@@ -193,16 +234,31 @@
         display: none;
     }
 
+    #contact-us,
     #about-us {
-        padding-right: 10px;
-        padding-left: 10px;
+        padding-right: 45px;
+        padding-left: 45px;
         flex-direction: column;
     }
 
-    #contact-us {
-        padding-right: 20px;
-        padding-left: 20px;
-        flex-direction: column;
+    .secondary-pic {
+        height: 200px;
+        width: 50%;
+    }
+
+    #pic-one {
+        margin-left: 0px;
+    }
+
+    #pic-two {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .secondary-pic {
+        height: 200px;
+        width: 50%;
     }
 }
 
@@ -216,5 +272,4 @@
         transition: 0.3s;
         border-radius: 3px;
     }
-
 }
