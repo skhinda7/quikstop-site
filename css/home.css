@@ -8,7 +8,6 @@
 
 .front-pic {
     vertical-align: middle;
-    height: 455px;
     width: 100%;
     margin-top: 50px;
     object-fit: cover;
@@ -97,14 +96,25 @@
     width: 65%;
 }
 
-#about-us-redirect {
+#about-us,
+#contact-us {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    padding-right: 155px;
+    padding-left: 150px;
 }
 
-.about {
+#contact-us {
+    margin-top: 50px;
+}
+
+#about-us {
+    margin-top: 150px;
+}
+
+.text {
     font-size: 20px;
     text-align: center;
     color: white;
@@ -114,15 +124,17 @@
     height: 300px;
 }
 
-#about-us-redirect {
-    padding-right: 155px;
-    padding-left: 150px;
-    margin-top: 50px;
-}
-
 .about {
     margin-right: 50px;
     margin-left: 60px;
+}
+
+#stack-pic {
+    display: none;
+}
+
+.contact {
+    margin-bottom: 10px;
 }
 
 
@@ -136,17 +148,30 @@
     }
 }
 
+
+
 @media only screen and (max-width: 720px) {
     .text {
-        font-size: 11px
+        font-size: 15px;
     }
 
     .letter {
-        font-size: 25px;
+        font-size: 15px;
     }
 
     .about {
-        margin: 0px 50px 50px 50px;
+        margin: 50px 50px 50px 50px;
+    }
+}
+
+@media (max-width: 900px) {
+    .about {
+        margin: 100px 50px 10px 50px;
+    }
+
+    .letter {
+        margin-top: 15px;
+        font-size: 25px;
     }
 }
 
@@ -159,9 +184,37 @@
         margin-top: 5px;
     }
 
-    #about-us-redirect {
-        padding-right: 0px;
-        padding-left: 0px;
+    #stack-pic {
+        display: block;
+        margin-top: 10px;
+    }
+
+    #pic-two {
+        display: none;
+    }
+
+    #about-us {
+        padding-right: 10px;
+        padding-left: 10px;
         flex-direction: column;
     }
+
+    #contact-us {
+        padding-right: 20px;
+        padding-left: 20px;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1750px) {
+    .front-pic {
+        vertical-align: middle;
+        height: 60vh;
+        width: 100%;
+        margin-top: 50px;
+        object-fit: cover;
+        transition: 0.3s;
+        border-radius: 3px;
+    }
+
 }
