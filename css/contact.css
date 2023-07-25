@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    position: relative;
+}
+
+.form {
+    grid-area: form;
+}
+
+.info {
+    grid-area: info;
+}
+
+.map {
+    grid-area: map;
+}
+
+.contact {
+    padding: 40px;
+    margin: 0px 50px 0px 50px;
+    background: #fff;
+    box-shadow: 0 5px 35px black;
+
+}
+
+.contact h3 {
+    background-color: transparent;
+    color: black;
+    font-weight: 500;
+    font-size: 1.4em;
+}
+
+.box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas: "form info" "form map";
+    grid-gap: 20px;
+}
+
+
+.formBox {
+    position: relative;
+    width: 100%;
+    
+}
+
+.formBox .row50 {
+    display: flex;
+    gap: 20px;
+    background-color: white;
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.formBox .row100 .inputBox {
+    width: 100%;
+}
+
+.inputBox span,
+.inputBox input,
+textarea {
+    color: black;
+    background-color: transparent;
+}
+
+.inputBox span {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.row100 {
+    background-color: white;
+}

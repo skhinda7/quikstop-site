@@ -7,6 +7,8 @@
     background-color: black;
     font-family: "Montserrat", "sans-serif";
     overflow-x: hidden;
+    color: white;
+
 }
 
 li,
@@ -39,7 +41,8 @@ button {
     transition: all 0.3s ease 0s;
 }
 
-.nav-link li a:hover {
+.nav-link li a:hover,
+.dropdown-menu li a:hover {
     color: red
 }
 
@@ -119,6 +122,8 @@ button:hover {
         cursor: pointer;
         display: block;
         height: calc(4px * 3 + 11px * 2);
+        overflow: hidden;
+        /* Hide scrollbars */
     }
 
     .bar {
