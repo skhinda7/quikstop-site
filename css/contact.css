@@ -13,19 +13,44 @@
 }
 
 .info {
-    grid-area: info;
+    text-align: center;
+}
+
+.info div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    justify-content: center;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+    background-color: white;
 }
 
 .map {
     grid-area: map;
 }
 
-.contact {
-    padding: 40px;
-    margin: 0px 50px 0px 50px;
+.info,
+.form {
     background: #fff;
     box-shadow: 0 5px 35px black;
+    overflow: hidden;
+    border-radius: 5px;
+}
 
+.form {
+    background-color: white;
+    margin-left: 160px;
+    padding: 150px 40px 150px 40px;
+}
+
+.map,
+.info {
+    margin: 0px 180px 0px 0px;
+    border-radius: 5px;
 }
 
 .contact h3 {
@@ -33,13 +58,21 @@
     color: black;
     font-weight: 500;
     font-size: 1.4em;
+    margin-top: 10px;
+}
+
+.title {
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .box {
     position: relative;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 5fr 4fr;
+    grid-template-columns: 60% 40%;
+    /* grid-template-columns: 2fr 1fr; */
+    grid-template-rows: 300px 300px;
     grid-template-areas: "form info" "form map";
     grid-gap: 20px;
 }
@@ -48,7 +81,6 @@
 .formBox {
     position: relative;
     width: 100%;
-    
 }
 
 .formBox .row50 {
@@ -62,6 +94,7 @@
     flex-direction: column;
     margin-bottom: 10px;
     width: 50%;
+    background-color: #fff;
 }
 
 .formBox .row100 .inputBox {
@@ -73,6 +106,8 @@
 textarea {
     color: black;
     background-color: transparent;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .inputBox span {
@@ -81,6 +116,57 @@ textarea {
     font-weight: 500;
 }
 
-.row100 {
+.row100,
+.infoBox div,
+#info,
+ion-icon,
+span,
+.hours,
+tr,
+th,
+td {
     background-color: white;
+    color: black;
+}
+
+.row100 button {
+    max-width: 120px;
+    align-self: center;
+}
+
+#status {
+    background-color: transparent;
+}
+
+#gmap_canvas {
+    width: 100%;
+    height: 100%;
+    overflow: none;
+}
+
+.map {
+    overflow: hidden;
+}
+
+#submit-btn {
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .box {
+        position: relative;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "form" "info" "map";
+    }
+
+    .form,
+    .map,
+    .info {
+        margin: 0px 100px 0px 100px;
+    }
+
+    .form {
+        padding: 40px 40px 40px 40px;
+    }
 }

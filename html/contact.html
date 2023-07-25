@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/menu.css">
     <link rel="stylesheet" href="/css/contact.css">
+    <script src="/scripts/contact.js"></script>
 </head>
 
 <body>
@@ -38,47 +39,94 @@
 
     <div class="box">
         <div class="contact form">
-            <h3>Send us a Message!</h3>
-            <form>
+            <div class="title">
+                <h3>Send us a Message!</h3>
+            </div>
+            <form action="https://formspree.io/f/mgejvdqd" method="POST" id="my-form">
                 <div class="formBox">
                     <div class="row50">
                         <div class="inputBox">
-                            <span class="white-div">First Name</span>
-                            <input type="text" placeholder="John">
+                            <span>First Name</span>
+                            <input name="first-name" type="text" placeholder="John">
                         </div>
                         <div class="inputBox">
-                            <span class="white-div">Last Name</span>
-                            <input class="white-div" type="text" placeholder="Doe">
+                            <span>Last Name</span>
+                            <input name="last-name" type="text" placeholder="Doe">
                         </div>
                     </div>
                     <div class="row50">
                         <div class="inputBox">
-                            <span class="white-div">Email</span>
-                            <input type="text" placeholder="Your Email">
-
+                            <span>Email</span>
+                            <input type="email" name="email" placeholder="quikstop@email.com">
                         </div>
                         <div class="inputBox">
                             <span>Phone Number</span>
-                            <input type="text" placeholder="Your Phone Number">
+                            <input type="text" name="number" placeholder="1234567890">
                         </div>
                     </div>
-        
+
                     <div class="row100">
                         <div class="inputBox">
                             <span>Your Message</span>
-                            <textarea placeholder="Your Message"></textarea>
+                            <textarea name="message" placeholder="Your Message Here!"></textarea>
                         </div>
                     </div>
                     <div class="row100">
                         <div class="inputBox">
-                            <button type="submit" id="submit-btn">Submit</button>
+                            <button type="submit" id="submit-btn">
+                                Submit
+                            </button>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
-        <div class="contact info"></div>
-        <div class="contact map"></div>
+        <div class="contact info">
+            <h3 margin-top="10px">Contact Info</h3>
+            <div class="infoBox">
+                <div>
+                    <span><ion-icon name="location-outline"></ion-icon></span>
+                    <a id="info" href="https://goo.gl/maps/ig4XBru71me4MsN56">Burlington, Iowa</a>
+                </div>
+                <div>
+                    <span><ion-icon name="mail-outline"></ion-icon></span>
+                    <a id="info" href="mailto:quikstop@gmail.com">quikstop@gmail.com</a>
+                </div>
+                <div>
+                    <span><ion-icon name="call-outline"></ion-icon></span>
+                    <a id="info" href="tel:+13197528700">(319)-752-8700</a>
+                </div>
+            </div>
+            <div class="hours">
+                <table>
+                    <tr>
+                        <th>Sunday</th>
+                        <td>Closed</td>
+                    </tr>
+                    <tr>
+                        <th>Monday</th>
+                        <td>9am - 5pm</td>
+                    </tr>
+                    <tr>
+                        <th>Tuesday</th>
+                        <td>9am - 5pm</td>
+                    </tr>
+                    <tr>
+                        <th>Wednesday</th>
+                        <td>9am - 5pm</td>
+                    </tr>
+                    <tr>
+                        <th>Thursday</th>
+                        <td>9am - 5pm</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <div class="contact map">
+            <iframe id="gmap_canvas"
+                src="https://maps.google.com/maps?width=700&amp;height=300&amp;hl=en&amp;q=1812%20Osborn%20Street%20Burlington+(Quikstop)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+        </div>
     </div>
 
 
@@ -87,4 +135,6 @@
             document.querySelector('.dropdown-menu').classList.toggle('open');
         });
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
