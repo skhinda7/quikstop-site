@@ -79,6 +79,24 @@ button:hover {
     display: none;
 }
 
+.logo-btn {
+    padding: 0px 0px;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 300px;
+    padding: 30px 10%;
+}
+
+#footer div {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+}
+
 @media screen and (max-width: 900px) {
 
     .numbertext {

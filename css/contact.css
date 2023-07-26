@@ -18,7 +18,6 @@
 
 .info div {
     margin-top: 10px;
-    margin-bottom: 10px;
     background-color: white;
     justify-content: center;
 }
@@ -152,7 +151,7 @@ td {
     text-align: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .box {
         position: relative;
         grid-template-columns: 1fr;
@@ -168,5 +167,22 @@ td {
 
     .form {
         padding: 40px 40px 40px 40px;
+    }
+
+    .info {
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .form {
+        background-color: white;
+        padding: 10px 10px 10px 10px;
+    }
+
+    .form,
+    .map,
+    .info {
+        margin: 0px 50px 0px 50px;
     }
 }
