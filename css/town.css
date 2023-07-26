@@ -94,9 +94,13 @@
         font-size: 20px;
     }
 
-    .downtown {
-        margin-top: 160px;
-        height: 400px;
-        width: 600px;
+    .downtown,
+    .town {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin: 0px 25px 0px 25px;
     }
 }
